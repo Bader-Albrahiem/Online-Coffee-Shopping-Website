@@ -88,7 +88,7 @@ namespace OnlineCoffeeShopping.Users
             textBody += "<a href ="+link+"> Click here</a>";
             textBody += "<p style=text-color:'silver'>" + "If you ignore this message, your password will not be changed, and your changes to Account center will not be saved. If you didn't requset a new password, let us know." + "</p>";
             MailMessage message = new MailMessage();
-            message.From = new MailAddress("spcoffeeweb@hotmail.com");
+            message.From = new MailAddress("email");
             message.To.Add(new MailAddress(recipientEmail));
             message.Subject = "Create a new password";
             message.Body = textBody;
@@ -97,7 +97,7 @@ namespace OnlineCoffeeShopping.Users
             smtp.Host = "smtp.office365.com";
             smtp.Port = 587;
             smtp.EnableSsl = true;
-            smtp.Credentials = new NetworkCredential("spcoffeeweb@hotmail.com", "josbnuhhslmbaooh");
+            smtp.Credentials = new NetworkCredential("email", "password");
             smtp.Send(message);
            
 
